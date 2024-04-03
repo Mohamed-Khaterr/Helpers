@@ -12,7 +12,7 @@ extension String {
     }
 }
 
-
+/// Managing App Localization
 class LocalizationManager {
     // MARK: - Enums
     enum LanguageDirection {
