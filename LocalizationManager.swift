@@ -14,21 +14,20 @@ class LocalizationManager {
         case english = "en"
     }
     
-    
-    // MARK: - Properties
+    // MARK: - Static Properties
     static let shared = LocalizationManager()
+    static var isRightToLeftSemantic: Bool { shated.getLanguageDirection() == .rightToLeft }
+    static var currentSemantic: UISemanticContentAttribute { isRightToLeftSemantic ? .forceRightToLeft : .forceLeftToRight } 
+
+    // MARK: - Private Properties
     private var bundle: Bundle?
     private var storedLanguage: String? {
         set { UserDefaults.standard.setValue(newValue, forKey: "user_preferred_language") }
         get { UserDefaults.standard.string(forKey: "user_preferred_language") }
-    }
-    
-    var isRightToLeftSemantic: Bool { getLanguageDirection() == .rightToLeft }
-    
+    }    
     
     // MARK: - Initializers
     private init() {}
-    
     
     // MARK: - Observers
     private var languageChangeObserver: (() -> Void)?
