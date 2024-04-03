@@ -1,6 +1,17 @@
 import Foundation
 import UIKit
 
+// MARK: - Add Localization to String
+extension String {
+    /// Get Localized value
+    var localized: String { LocalizationManager.shared.localizedString(for: self) } 
+
+    /// Set current value to it's localization value
+    mutating func localizing() {
+        self = LocalizationManager.shared.localizedString(for: self)
+    }
+}
+
 
 class LocalizationManager {
     // MARK: - Enums
