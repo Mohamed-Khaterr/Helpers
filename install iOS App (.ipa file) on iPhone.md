@@ -9,7 +9,7 @@ If you have a Provisioning Profile in Xcode then below method will 100% work as 
 
 1. Right CLick on the .xcarchive file and click Show package content and go to the Products -> Applications folder. 
 
-1. Inside Applications folder Create a new folder name it **Payload** and drag the .app file into that folder.
+1. Inside Applications folder Create a new folder name it **Payload** and drag the `.app` file into that folder.
 
 1. Compress [Create Zip File] the Payload folder and rename it to whatever you want and change the extension to `.ipa`.
 
